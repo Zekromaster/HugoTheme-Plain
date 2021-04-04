@@ -3,9 +3,11 @@
         {{ if $i }} <hr width="50%" /> {{ end }}
         {{ with $e}}
             <a href={{ .Permalink | absURL }}> <h4> {{ .Title }} </h4> </a>
-            <h5 class="white_back"> {{ .Date.Format "2 of January, 2006" }} {{ with .Params.Author }} ~ {{ . }} {{ end }} </h5>
-            <br />
-            {{ .Description }}
+            <h5> {{ .Date.Format "2 of January, 2006" }} {{ with .Params.Author }} ~ {{ . }} {{ end }} </h5>
+            <hp><b>Tags: </b>{{ with .Params.tags }}{{ delimit . ", " }}{{ end }}</p>
+            <p>
+                {{ .Description }}
+            </p>
         {{ end }}
     {{ end }}
 {{ end }}
