@@ -10,10 +10,13 @@
     text-align: center;
     flex-wrap: wrap;
     margin: auto;
+    padding:0.5em;
 }
 
 .mainlink {
     font-weight: bold;
+    font-size: 1.3em;
+    margin: 0.5em;
 }
 
 #main {
@@ -27,4 +30,11 @@ table, th, td {
   
 th, td {
 padding: 1em;
+}
+
+@media screen and (max-width: 768px) {
+    .navbar {
+      flex-direction: column;
+      flex-wrap: nowrap;
+    }
 }
